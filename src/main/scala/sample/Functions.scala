@@ -19,12 +19,7 @@ object AnonymousFunction {
   }
 }
 
-object HighOrderFunctions {
-  def main(args: Array[String]) = {
-    println("Plus " + hof(12, plusOne))
-    println("Minus " + hof(12, minusOne))
-  }
-
+object HighOrderFunctions extends App {
   val plusOne = (x: Int) => x + 1
   val minusOne = (x: Int) => x - 1
   val hof = (x: Int, f: Int => Int) => f(x)
