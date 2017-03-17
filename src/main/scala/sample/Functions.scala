@@ -8,7 +8,7 @@ object Functions extends App {
   println(oneParam(4))
 
   val twoParams = (x: Int, y: Int) => x + y
-  println(twoParams(3,4))
+  println(twoParams(3, 4))
 }
 
 object AnonymousFunction {
@@ -17,4 +17,15 @@ object AnonymousFunction {
   def main(args: Array[String]): Unit = {
     println(plusOne(2))
   }
+}
+
+object HighOrderFunctions {
+  def main(args: Array[String]) = {
+    println("Plus " + hof(12, plusOne))
+    println("Minus " + hof(12, minusOne))
+  }
+
+  val plusOne = (x: Int) => x + 1
+  val minusOne = (x: Int) => x - 1
+  val hof = (x: Int, f: Int => Int) => f(x)
 }
