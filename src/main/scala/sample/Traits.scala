@@ -26,5 +26,5 @@ class CustomisableGreeter(prefix: String, postfix: String) extends MyGreeter {
   }
 }
 
-class MyPoint(x: Int, y: Int) extends Similarity {
-}
+//class MyPoint(x: Int, y: Int) extends Similarity {
+//}

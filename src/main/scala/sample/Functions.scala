@@ -10,3 +10,11 @@ object Functions extends App {
   val twoParams = (x: Int, y: Int) => x + y
   println(twoParams(3,4))
 }
+
+object AnonymousFunction {
+  val plusOne = (x: Int) => x + 1
+
+  def main(args: Array[String]): Unit = {
+    println(plusOne(2))
+  }
+}
