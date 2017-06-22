@@ -2,11 +2,11 @@ package sample
 
 class FunctionPassingAsArguments {
 
-  val sayGoodMorning = (name: String) => s"Good Morning $name"
+  val sayGoodMorning: (String) => String = (name: String) => s"Good Morning $name"
 
-  val sayGoodAfternoon = (name: String) => s"Good Afternoon $name"
+  val sayGoodAfternoon: (String) => String = (name: String) => s"Good Afternoon $name"
 
-  def saySomething(whatToSay: String => String, name: String) = println(whatToSay(name))
+  def saySomething(whatToSay: String => String, name: String): Unit = println(whatToSay(name))
 }
 
 object FunctionPassingAsArgumentsRunner {

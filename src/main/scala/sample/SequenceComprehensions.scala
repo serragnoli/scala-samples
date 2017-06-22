@@ -2,6 +2,8 @@ package sample
 
 import java.util.Locale
 
+import scala.collection.immutable.IndexedSeq
+
 object SequenceComprehensions extends App {
   def even(from: Int, to: Int): List[Int] = {
     for {
@@ -20,4 +22,16 @@ object UpperCaser extends App {
   }
 
   println(toUpperCase(Array[String]("test", "if", "this", "text", "can", "be", "capitalised")).mkString(", "))
+}
+
+object ComputePairs extends App {
+  def pairs(n: Int, v: Int): IndexedSeq[(Int, Int)] = {
+    for (i <- 0 until n;
+         j <- i until n if i + j == v
+    ) yield (i, j)
+  }
+
+  pairs(20, 32) foreach {
+    case (x, y) => println(s"($x,$y)")
+  }
 }
