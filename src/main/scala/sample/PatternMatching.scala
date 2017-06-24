@@ -21,4 +21,6 @@ object PatternMatching2 extends App {
   println(matchTest(1))
   println(matchTest("Two"))
   println(matchTest(3))
+
+  new SimpleFormClass
 }
